@@ -1,0 +1,294 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@media (max-width: 762px) {
+  .btn-responsive {
+    font-size: 80%;
+    line-height: 1.4;
+    padding: 3px 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 992px) {
+  .btn-responsive {
+    padding: 4px 9px;
+    font-size: 90%;
+    line-height: 1.5;
+  }
+}
+
+body {
+  color: #66615b;
+  font-size: 14px;
+  font-family: 'Muli', Arial, sans-serif;
+  background-color: #f7f7f7;
+  background-color: #f9f7ed;
+  /*background: url(../image/black.jpg) ;*/
+  margin-bottom: 60px;
+  margin-top: 120px;
+}
+
+.btn-default {
+  font-size: 12px;
+  text-align: right;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn.btn-raised {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12), 0 2px 8px rgba(0, 0, 0, .12);
+  transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1);
+}
+
+.btn.btn-raised:hover,
+.btn:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .50), 0 4px 8px rgba(0, 0, 0, .50);
+  transition: box-shadow .128s cubic-bezier(.4, 0, .2, 1);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.card {
+  text-align: center;
+  background-color: #FFF;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
+  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
+  /*box-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 6px rgba(0,0,0,.12);*/
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card-title {
+  padding-top: 2px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .26);
+}
+
+
+/* chart layout for creating blocks*/
+.chart-wrapper {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .16);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .16);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .16);
+}
+
+.chart-wrapper .chart-title {
+  text-transform: capitalize;
+  border-bottom: 3px solid #d9d9d9;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 10px 10px;
+}
+
+.chart-wrapper .chart-area {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.chart-footer {
+  font-size: 15px;
+  padding: 0px 20px 5px 20px;
+  line-height: 25px;
+}
+
+hr {
+  border-color: #d2bc9d;
+}
+
+.chart-footer hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+/*Widget container*/
+.widget-container {
+  background: #fff;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #cdcdcd;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.widget-header {
+  font-size: 20px;
+  font-weight: bold;
+  /*border-bottom: 1px solid #cdcdcd;*/
+}
+
+
+/*widget container */
+.widget-box {
+  background: #FFFFFF;
+  border-left: 1px solid #cdcdcd;
+  border-top: 1px solid #cdcdcd;
+  border-right: 1px solid #cdcddc;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.widget-title {
+  background: #efefef;
+  padding: 10px 10px;
+  font-size: 15px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.widget-content {
+  padding: 10px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.widget-footer {
+  padding: 10px 5px;
+  font-size: 15px;
+  border-top: 1px solid #cdcdcd;
+}
+
+
+/*widget */
+.widget-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  padding: 20px;
+  width: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/*custome style on navbar */
+.navbar {
+  min-height: 50px;
+  border-bottom: 0px solid #d9d9d9;
+  background-color: #777;
+  /*background-color: #f9f7ed;
+  background-color: #f4f3ef;
+  background-color: #77cc6d; 
+  background-color: #ffd777;*/
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .13), 0 3px 10px rgba(0, 0, 0, .16);
+}
+
+
+/*custome style on navbar brand */
+.navbar .navbar-brand {
+  color: #777;
+  color: #fff;
+  position: absolute;
+  left: 40px;
+  margin: 20px 20px;
+  font-weight: 600;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+
+/* navbar brand on hover */
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #68B3C8;
+}
+
+
+/*custome style on navbar li */
+.navbar .navbar-nav > li > a {
+  /*color: #777;*/
+  color: #9a9a9a;
+  color: #fff;
+  /*font-weight: 600;*/
+  right: 20px;
+  font-size: 18px;
+  line-height: 1.42857;
+  margin: 20px 20px;
+  padding: 10px 10px;
+}
+
+
+/* navbar li on hover */
+.navbar .navbar-nav > li > a:hover {
+  background-color: transparent;
+  color: #68B3C8;
+}
+
+
+/* navbar li on click */
+.navbar .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+
+/* active navbar li */
+.navbar .navbar-nav>.active>a,
+.navbar .navbar-nav>.active>a:focus,
+.navbar .navbar-nav>.active>a:hover {
+  background-color: #66615b !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+}
+
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+text {
+  cursor: default;
+  fill: #FFF;
+  pointer-events: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.caption {
+   font-family: 'Muli', Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.caption .btn-border{
+  margin: auto;
+  width: 50% !important; 
+  border: solid 4px;
+  color: #000;
+  padding: 20px 30px 20px 30px;
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+
+#pasteData{
+  display: none;
+}
+
+#exampleData{
+  display: none;
+}
+
+#loadData{
+  display: block;
+  background-color: #fff;
+  margin: 100px 0px ;
+}
