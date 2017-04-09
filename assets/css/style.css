@@ -1,20 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
 @media (max-width: 762px) {
   .btn-responsive {
-    font-size: 80%;
+    font-size: 12px !important;
     line-height: 1.4;
     padding: 3px 6px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    white-space:normal !important;
+    word-wrap:break-word; 
   }
+  
+  .arrow-down{
+    top: 90% !important;
+    margin-left: 50%;
+    padding:12px !important;
+    font-size: 15px !important;
+    width: 50px !important;
+  }  
+  
+  .inner p{
+    font-size: 15px !important;  
+  }
+  
 }
 
 @media (min-width: 760px) and (max-width: 992px) {
   .btn-responsive {
     padding: 4px 9px;
-    font-size: 90%;
+    font-size: 12px !important;
     line-height: 1.5;
+    white-space:normal !important;
+    word-wrap:break-word; 
+  }
+  
+  .arrow-down{
+    top: 85% !important;
+    margin-left: 50%;
+    padding:15px !important;
+    font-size: 15px !important;
+    width: 55px !important;
+  }
+  
+  .inner p{
+    font-size: 25px !important;   
   }
 }
 
@@ -308,6 +337,7 @@ text {
   left: 0;
   top: 35%;
   margin-left: 25%;
+  margin-right: 25%;
   /*background: rgba(52, 27, 43, 0.5);*/
   color: rgba(52, 27, 43, 0.8);
   text-align: center;
@@ -329,8 +359,8 @@ text {
 .arrow-down{
   top: 80%;
   margin-left: 50%;
-  padding:10px;
-  font-size: 35px;
+  padding:15px;
+  font-size: 30px;
   background-color: rgba(52, 27, 43, 0.7);
   border-radius: 50%;
   width: 70px;
