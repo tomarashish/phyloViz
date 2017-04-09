@@ -25,8 +25,11 @@ body {
   background-color: #f7f7f7;
   background-color: #f9f7ed;
   /*background: url(../image/black.jpg) ;*/
-  margin-bottom: 60px;
-  margin-top: 120px;
+}
+
+.container-fluid{
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn-default {
@@ -249,9 +252,8 @@ hr {
   border-radius: 6px !important;
 }
 
-.row {
-  margin-right: 10px;
-  margin-left: 10px;
+.step{
+background-color: #f7f7f7;  
 }
 
 text {
@@ -260,23 +262,6 @@ text {
   pointer-events: none;
   font-size: 12px;
   font-weight: bold;
-}
-
-.caption {
-   font-family: 'Muli', Arial, sans-serif;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.caption .btn-border{
-  margin: auto;
-  width: 50% !important; 
-  border: solid 4px;
-  color: #000;
-  padding: 20px 30px 20px 30px;
-  font-size: 15px;
-  letter-spacing: 5px;
 }
 
 #pasteData{
@@ -291,4 +276,84 @@ text {
   display: block;
   background-color: #fff;
   margin: 100px 0px ;
+}
+
+.parallex-img1, .parallex-img2, .parallex-img3{
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.parallex-img1 {
+  background-image: url("../img/seq1.png");
+  height: 100vh;
+}
+
+.parallex-img2{
+  background-image: url("../img/sun1.png");
+  height: 300px;
+}
+
+.inner{
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin-left: 25%;
+  /*background: rgba(52, 27, 43, 0.5);*/
+  color: rgba(52, 27, 43, 0.8);
+  text-align: center;
+  display: inline-block;
+}
+
+.inner header h2{
+  font-family: 'Muli', Arial, sans-serif;
+  font-weight: bold !important;
+}
+
+.inner p{
+  font-size:25px;  
+  font-weight: bold !important;
+  font-family: 'Muli', Arial, sans-serif;
+}
+
+.arrow-down{
+  top: 80%;
+  margin-left: 50%;
+  padding:10px;
+  font-size: 40px;
+  background-color: rgba(52, 27, 43, 0.9);
+  border-radius: 50%;
+  width: 75px;
+}
+
+.arrow-down a{
+  color: #fff !important;
+}
+  
+.caption {
+  font-family: 'Muli', Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.caption .btn-solid{
+  color: #fff;
+  background-color: rgba(52, 27, 53, .9);
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.caption .btn-border{
+  margin: auto;
+  width: 50% !important; 
+  border: solid 4px;
+  color: #000;
+  padding: 20px 30px 20px 30px;
+  font-size: 15px;
+  letter-spacing: 5px;
 }
