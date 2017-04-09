@@ -18,6 +18,10 @@
   }
 }
 
+a{
+ text-decoration: none !important;  
+}
+
 body {
   color: #66615b;
   font-size: 14px;
@@ -199,12 +203,13 @@ hr {
 .navbar .navbar-brand {
   color: #777;
   color: #fff;
+  color: darkturquoise;
   position: absolute;
   left: 40px;
   margin: 20px 20px;
-  font-weight: 600;
+  font-weight: bolder;
   padding: 10px 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 
@@ -212,6 +217,7 @@ hr {
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   color: #68B3C8;
+  color: darkturquoise;
 }
 
 
@@ -233,6 +239,7 @@ hr {
 .navbar .navbar-nav > li > a:hover {
   background-color: transparent;
   color: #68B3C8;
+  color: darkturquoise;
 }
 
 
@@ -275,7 +282,7 @@ text {
 #loadData{
   display: block;
   background-color: #fff;
-  margin: 100px 0px ;
+  margin: 200px 0px ;
 }
 
 .parallex-img1, .parallex-img2, .parallex-img3{
@@ -299,7 +306,7 @@ text {
 .inner{
   position: absolute;
   left: 0;
-  top: 40%;
+  top: 35%;
   margin-left: 25%;
   /*background: rgba(52, 27, 43, 0.5);*/
   color: rgba(52, 27, 43, 0.8);
@@ -307,13 +314,14 @@ text {
   display: inline-block;
 }
 
-.inner header h2{
+.inner header h1{
   font-family: 'Muli', Arial, sans-serif;
-  font-weight: bold !important;
+  font-weight: bolder !important;
+  color: darkturquoise;
 }
 
 .inner p{
-  font-size:25px;  
+  font-size: 25px;  
   font-weight: bold !important;
   font-family: 'Muli', Arial, sans-serif;
 }
@@ -322,16 +330,20 @@ text {
   top: 80%;
   margin-left: 50%;
   padding:10px;
-  font-size: 40px;
-  background-color: rgba(52, 27, 43, 0.9);
+  font-size: 35px;
+  background-color: rgba(52, 27, 43, 0.7);
   border-radius: 50%;
-  width: 75px;
-}
+  width: 70px;
+}  
 
-.arrow-down a{
+.arrow-down a{ 
   color: #fff !important;
 }
-  
+
+.arrow-down a:hover{
+  color: darkturquoise !important;
+}
+
 .caption {
   font-family: 'Muli', Arial, sans-serif;
   margin-top: 50px;
@@ -342,8 +354,8 @@ text {
 .caption .btn-solid{
   color: #fff;
   background-color: rgba(52, 27, 53, .9);
-  padding: 15px 20px;
-  font-size: 15px;
+  padding: 15px 15px;
+  font-size: 18px;
   font-weight: bolder;
   letter-spacing: 2px;
 }
@@ -354,6 +366,12 @@ text {
   border: solid 4px;
   color: #000;
   padding: 20px 30px 20px 30px;
-  font-size: 15px;
-  letter-spacing: 5px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.btn-solid:hover,
+.btn-solid:focus
+{
+  color: darkturquoise;
 }
