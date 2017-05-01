@@ -156,7 +156,6 @@ hr {
   margin-bottom: 5px;
 }
 
-
 /*Widget container*/
 .widget-container {
   background: #fff;
@@ -404,4 +403,15 @@ text {
 .btn-solid:focus
 {
   color: darkturquoise;
+}
+
+/* custome style for library page*/
+.lib-phylo{
+ margin: 100px 500px;  
+}
+
+#getting-started,
+#discover-more{
+  display: block;
+  background-color: #fff;
 }
