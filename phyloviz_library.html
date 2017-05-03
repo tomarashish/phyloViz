@@ -47,9 +47,20 @@
   </header>
   <!-- end of header-->
 
+  <!-- footer -->
+     <!--footer class="footer">
+    <div class="container">
+      <p>Developed By :
+         <span><a href="https://era7bioinformatics.com/en/index.cfm" target="_blank">Era7 Bioinformatics</a></span> &nbsp; And &nbsp;
+        <span><a href="http://big4-project.eu/" target="_blank">Big4 Project</a></span>
+        <span style="float:right"> Project Funded By: <b>European Union </b><img id="footer-logo" height="30" width="40" src="data/images/logoeu.gif"/></span>
+      </p>
+    </div>
+  </footer--><!-- end of footer-->
+  
   <!-- Library Description -->
   <div class="container-fluid">
-    <div class="lib-phylo">
+    <div class="lib-phylo row">
       <div class="col-md-12 col-sm-12">
         <div style="font-size: 25px;">
           <center>
@@ -62,28 +73,162 @@
       </div>
     </div>
     <!--end of lib-phylo-->
-    <div id="getting-started" class="lib-phylo">
-      <div class="col-md-12 col-sm-12"></div>
+    <div id="getting-started" class="row">
+      <div class="col-md-12 col-sm-12">
+        <header>
+          <h2>Getting Started</h2>
+        </header>
+        <p>Creating a basic phylogenetic tree visualization application
+        </p>
+        <div class="col-md-6 col-sm-12">
+          <p><b>DATA</b></p>
+          <textarea readonly>
+        <!--newick_tree.txt-->    
+(Branchiostoma:0.451027,(Hydra magnipapillata:0.340495):0.222485,(Trichoplax adherens:0.558103,((Ciona savignyi:0.441842,Ciona savignyi:0.299607):0.135307,((Gasterosteus aculeatus:0.771665,((Tetraodon nigroviridis:0.150909):0.082163,Takifugu rubripes:0.099172):0.272338):0.014055,((Macropus eugenii:0.167569):0.104783,Sarcophilus harrisii:0.166557):0.367205):0.050892):0.114731):0.295021);
+          </textarea>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p><b>HTML</b></p>
+          <textarea readonly><!--head>
+            <link rel="stylesheet" type="text/css" href="tree.css">
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+            <script src="js/phyloGraph.min.js"></script>
+          </head>
+          <body>
+            <div id="phylogram"></div>
+            Calling module in javascript in html inside script tag
+            <script type="text/javascript">
+
+            d3.json('/data/newick_tree.txt', function(data){
+
+              var treeView = dendroGram();
+              var container = d3.select("#phylogram")
+                .datum(data)
+                .call(treeView);
+            });
+            </script>
+          </body-->
+        </textarea>
+        </div>
+      </div>
     </div>
-    <div id="features" class="lib-phylo">
+
+    <div id="features" class="lib-phylo row">
       <div class="col-md-12 col-sm-12">
         <header>
           <h2>Features</h2>
         </header>
+        <p>Tree visualization along with metadata.
+          <br>phyloGraph is a reusable d3.js module which creates a resizable SVG container.
+        </p>
+
+        <div class="col-md-6 col-sm-6">
+          <p><b>CONTROL OPTIONS</b></p>
+          <ul>
+            <li>Add/remove link weight</li>
+            <li>Add/remove link values display</li>
+            <li>Add/remove link name display</li>
+            <li>Add/remove node size</li>
+            <li>Chnage tree display (linear/radial)</li>
+            <li>Link extension</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <p><b>ADD METADATA</b></p>
+          <ul>
+          <li>Add rectangle</li>
+          <li>Add bar chart</li>
+          <li>Add pie chart</li>
+          <li>Add alignment sequence</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div id="tutorial" class="lib-phylo">
+    
+    <div id="tutorial" class="row">
       <div class="col-md-12 col-sm-12">
         <header>
           <h2>Tutorial</h2>
         </header>
       </div>
+       <div class="col-md-12 col-sm-12">
+         <p>Creating phylogenetic tree visualization with option and metadata</p>
+        <div class="col-md-6 col-sm-6">
+         
+          <p><b>Javascript</b> &nbsp;(app.js)</p>
+          <textarea readonly>
+                      // Creating module object with default values
+var dendroChart = dendroGram();
+
+// Changing width, height or other exports object
+var dendroChart = dendroGram()
+              .width(1200)
+              .height(700);
+// bar chart data
+var data = [
+  {Name:"A", value:42},
+  {Name:"B", value:60},
+  {Name:"C", value:23},
+  {Name:"D", value:122}
+];
+
+            
+// Creating module object with option object
+var opt = {
+              weightLinks : true,
+              linkValue : false,
+              linkName : false,
+              nodeSize : false,
+              legend: false,
+              noLinkExtend: false,
+              treeType: 'linear',	// linear/radial type
+              subTree: false		// Only for linear mode
+          };
+
+var dendroChart = dendroGram()
+        .options(opt) //custom options
+        .barData(data);	// adding bar chart data to module
+
+// load a newick data file
+d3.text('/data/newick_tree.txt', function(tree){
+
+  // calling module to create chart
+  var chartContainer = d3.select("#svg_id")
+       .datum(tree)
+       .call(dendroChart);
+})
+          </textarea>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <p><b>HTML</b> &nbsp;(index.html)</p>
+          <textarea readonly>
+            <!--head>
+            <link rel="stylesheet" type="text/css" href="tree.css">
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+            <script src="js/phyloGraph.min.js"></script>
+          </head>
+          <body>
+            <div id="phylogram"></div>
+
+            Calling module in javascript in html inside script tag
+            <script src="js/app.js"></script>
+          </body-->
+        
+          </textarea>
+        </div>
+        
+      </div>
     </div>
-    <div id="discover-more" class="lib-phylo">
+
+    <div id="discover-more" class="lib-phylo row">
       <div class="col-md-12 col-sm-12">
         <center style="font-size: 25px">
           Discover More
         </center>
+        <div class="col-md-6 col-sm-6"></div>
+        <div class="col-md-6 col-sm-6"></div>
       </div>
     </div>
   </div>

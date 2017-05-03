@@ -1,4 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+
 @media (max-width: 762px) {
   .btn-responsive {
     font-size: 12px !important;
@@ -43,7 +52,7 @@
   }
   
   .inner p{
-    font-size: 25px !important;   
+    font-size: 25px !important;
   }
 }
 
@@ -234,7 +243,7 @@ hr {
   color: darkturquoise;
   position: absolute;
   left: 40px;
-  margin: 20px 20px;
+  margin: 10px 20px;
   font-weight: bolder;
   padding: 10px 10px;
   font-size: 25px;
@@ -255,10 +264,10 @@ hr {
   color: #9a9a9a;
   color: #fff;
   /*font-weight: 600;*/
-  right: 20px;
+  right: 30px;
   font-size: 18px;
   line-height: 1.42857;
-  margin: 20px 20px;
+  margin: 10px 20px;
   padding: 10px 10px;
 }
 
@@ -407,11 +416,42 @@ text {
 
 /* custome style for library page*/
 .lib-phylo{
- margin: 100px 500px;  
+ margin: 100px 400px;  
 }
 
 #getting-started,
-#discover-more{
-  display: block;
+#tutorial
+{
+  padding-left: 400px;  
+  padding-right: 400px;  
+  padding-bottom: 30px;
   background-color: #fff;
+}
+
+#getting-started,
+#features,
+#tutorial,
+#discover-more
+p{
+  font-family: 'Muli', sans-serif;
+  font-size:25px;
+}
+
+textarea{
+  font-size: 16px;
+  height:300px; 
+  width:500px;
+}
+
+.footer {
+  font-weight: bolder;
+  font-size: 18px;
+  font-family: 'Muli', Arial, sans-serif;
+  position: absolute !important;
+  width: 100%;
+  bottom:0 !important;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: #e8dddd;
 }
