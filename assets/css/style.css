@@ -32,6 +32,10 @@
     font-size: 15px !important;  
   }
   
+  .lib-phylo{
+    margin: 10px 2px;  
+  }
+  
 }
 
 @media (min-width: 760px) and (max-width: 992px) {
@@ -53,6 +57,10 @@
   
   .inner p{
     font-size: 25px !important;
+  }
+  
+  .lib-phylo{
+    margin: 10px 4px;  
   }
 }
 
