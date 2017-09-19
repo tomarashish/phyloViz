@@ -25,10 +25,72 @@ function init(){
    //radialDendrogram();
 } //end of init()
 
+function tryExample(){
+
+  d3.select("#loadFile").style("display","none");
+   d3.select("#pasteUrl").style("display","none");
+  d3.select("#exampleData").style("display", "block");
+  
+}
+
+function loadData(){
+  
+   d3.select("#pasteUrl").style("display","none");
+  d3.select("#exampleData").style("display", "none");
+  d3.select("#loadFile").style("display","block");
+  
+}
+
+function pasteUrl(){
+
+  d3.select("#loadFile").style("display","none");
+  d3.select("#exampleData").style("display", "none");
+  d3.select("#pasteUrl").style("display", "block");
+  
+}
+
+//Input file name display
+$("input[id='upload_tree']").change(function (e) {
+    var $this = $(this);
+    $this.next().html($this.val().split('\\').pop());
+});
+
+//Input file name display
+$("input[id='upload_metadata']").change(function (e) {
+    var $this = $(this);
+    $this.next().html($this.val().split('\\').pop());
+});
+
+//file upload 
+var raw_data;
+var readerTree = new FileReader();
+var readerMetadata = new FileReader();
+
+
+d3.select("#submit_file").on("click",function() {
+    console.log(d3.select("#upload_tree")[0][0].files[0])
+    console.log(d3.select("#upload_metadata")[0][0].files[0])
+    readerTree.readAsText(d3.select("#upload_tree")[0][0].files[0]);
+  readerMetadata.readAsText(d3.select("#upload_metadata")[0][0].files[0]);
+  
+  var tree_data, meta_data;
+  
+  readerTree.onload = function(event) {
+	tree_data = event.target.result;
+    
+    readerMetadata.onload = function(event) {
+	 meta_data = event.target.result;
+      console.log(tree_data, meta_data)
+      //var collection = tsvJSON(raw_data)
+	//init(collection)
+  }
+  }
+  pieData();
+});
 
 function linkWeight(){
     
-     d3.text("data/test1.txt", function(error, tree){
+     d3.text("./assets/data/test1.txt", function(error, tree){
           var options = {  
                     weightLinks : true, 
                     linkValue : false, 
@@ -175,10 +237,10 @@ function stackedBarChart(){
 
 function pieData(){
     
-     d3.text("data/test2.txt", function(error, tree){
+     d3.text("./assets/data/test2.txt", function(error, tree){
        //d3.text("/data/life.txt", function(error, tree){ 
 		
-        d3.csv("data/pie_data1.csv", function(error, piedata){ 
+        d3.csv("./assets/data/pie_data1.csv", function(error, piedata){ 
         	var dendroChart = dendroGram()
                 //.heatData(heatMapData)
                 .pieData(piedata)
@@ -337,102 +399,4 @@ function showImage(){
     		})// end of heatmap data
 		})//end of bar data
 	})// end of tree data
-}
-
-function heatmapWC(){
-    d3.text("data/test2.txt", function(error, tree){
-	
-		var heatMapData = 
-			[ {name:'gene1', sample:'place1', specificity:0, value:1},{name:'gene1', sample:'place2', specificity:0, value:1},{name:'gene1', sample:'place3', specificity:0, value:0},{name:'gene1', sample:'place4', specificity:0, value:1},{name:'gene1', sample:'place5', specificity:0, value:1},{name:'gene2', sample:'place1', specificity:0, value:1},{name:'gene2', sample:'place2', specificity:0, value:0},{name:'gene2', sample:'place3', specificity:0, value:1},{name:'gene2', sample:'place4', specificity:0, value:1},{name:'gene2', sample:'place5', specificity:0, value:0},{name:'gene3', sample:'place1', specificity:0, value:1},{name:'gene3', sample:'place2', specificity:0, value:0},{name:'gene3', sample:'place3', specificity:0, value:0},{name:'gene3', sample:'place4', specificity:0, value:0},{name:'gene3', sample:'place5', specificity:0, value:1},{name:'gene4', sample:'place1', specificity:0, value:1},{name:'gene4', sample:'place2', specificity:0, value:1},{name:'gene4', sample:'place3', specificity:0, value:0},{name:'gene4', sample:'place4', specificity:0, value:1},{name:'gene4', sample:'place5', specificity:0, value:1},{name:'gene5', sample:'place1', specificity:0, value:1},{name:'gene5', sample:'place2', specificity:0, value:0},{name:'gene5', sample:'place3', specificity:0, value:1},{name:'gene5', sample:'place4', specificity:0, value:1},{name:'gene5', sample:'place5', specificity:0, value:0},
-			{name:'gene6', sample:'place1', specificity:0, value:1},{name:'gene6', sample:'place2', specificity:0, value:1},{name:'gene6', sample:'place3', specificity:0, value:0},{name:'gene6', sample:'place4', specificity:0, value:1},{name:'gene6', sample:'place5', specificity:0, value:1},{name:'gene7', sample:'place1', specificity:0, value:1},{name:'gene7', sample:'place2', specificity:0, value:0},{name:'gene7', sample:'place3', specificity:0, value:1},{name:'gene7', sample:'place4', specificity:0, value:1},{name:'gene7', sample:'place5', specificity:0, value:0},{name:'gene8', sample:'place1', specificity:0, value:1},{name:'gene8', sample:'place2', specificity:0, value:1},{name:'gene8', sample:'place3', specificity:0, value:0},{name:'gene8', sample:'place4', specificity:0, value:1},{name:'gene8', sample:'place5', specificity:0, value:1},{name:'gene9', sample:'place1', specificity:0, value:1},{name:'gene9', sample:'place2', specificity:0, value:0},{name:'gene9', sample:'place3', specificity:0, value:1},{name:'gene9', sample:'place4', specificity:0, value:1},{name:'gene9', sample:'place5', specificity:0, value:0},{name:'gene10', sample:'place1', specificity:0, value:1},{name:'gene10', sample:'place2', specificity:0, value:0},{name:'gene10', sample:'place3', specificity:0, value:0},{name:'gene10', sample:'place4', specificity:0, value:0},{name:'gene10', sample:'place5', specificity:0, value:1},{name:'gene11', sample:'place1', specificity:0, value:1},{name:'gene11', sample:'place2', specificity:0, value:1},{name:'gene11', sample:'place3', specificity:0, value:0},{name:'gene11', sample:'place4', specificity:0, value:1},{name:'gene11', sample:'place5', specificity:0, value:1},{name:'gene12', sample:'place1', specificity:0, value:1},{name:'gene12', sample:'place2', specificity:0, value:0},{name:'gene12', sample:'place3', specificity:0, value:1},{name:'gene12', sample:'place4', specificity:0, value:1},{name:'gene12', sample:'place5', specificity:0, value:0}
-		];
-		
-		 var options = {  
-                    treeType: 'linear',
-                  	heatType : 'circle'
-                 };
-        
-		
-        var dendroChart = dendroGram()
-				  .option(options)
-				  .heatData(heatMapData);
-        
-       var chartContainer = d3.select("#dendogram")
-            .datum(tree)
-            .call(dendroChart);
-	})
-}
-
-function punchCard(){
-    d3.text("data/test2.txt", function(error, tree){
-	
-		var heatMapData = 
-			[ {name:'gene1', sample:'place1', specificity:0, value:100},{name:'gene1', sample:'place2', specificity:0, value:50},{name:'gene1', sample:'place3', specificity:0, value:120},{name:'gene1', sample:'place4', specificity:0, value:181},{name:'gene1', sample:'place5', specificity:0, value:117},{name:'gene2', sample:'place1', specificity:0, value:151},{name:'gene2', sample:'place2', specificity:0, value:110},{name:'gene2', sample:'place3', specificity:0, value:123},{name:'gene2', sample:'place4', specificity:0, value:132},{name:'gene2', sample:'place5', specificity:0, value:120},{name:'gene3', sample:'place1', specificity:0, value:160},{name:'gene3', sample:'place2', specificity:0, value:43},{name:'gene3', sample:'place3', specificity:0, value:220},{name:'gene3', sample:'place4', specificity:0, value:236},{name:'gene3', sample:'place5', specificity:0, value:54},{name:'gene4', sample:'place1', specificity:0, value:250},{name:'gene4', sample:'place2', specificity:0, value:231},{name:'gene4', sample:'place3', specificity:0, value:20},{name:'gene4', sample:'place4', specificity:0, value:33},{name:'gene4', sample:'place5', specificity:0, value:31},{name:'gene5', sample:'place1', specificity:0, value:30},{name:'gene5', sample:'place2', specificity:0, value:240},{name:'gene5', sample:'place3', specificity:0, value:16},{name:'gene5', sample:'place4', specificity:0, value:200},{name:'gene5', sample:'place5', specificity:0, value:206},  {name:'gene6', sample:'place1', specificity:0, value:100},{name:'gene6', sample:'place2', specificity:0, value:50},{name:'gene6', sample:'place3', specificity:0, value:120},{name:'gene6', sample:'place4', specificity:0, value:181},{name:'gene6', sample:'place5', specificity:0, value:117},{name:'gene7', sample:'place1', specificity:0, value:151},{name:'gene7', sample:'place2', specificity:0, value:110},{name:'gene7', sample:'place3', specificity:0, value:123},{name:'gene7', sample:'place4', specificity:0, value:132},{name:'gene7', sample:'place5', specificity:0, value:120},{name:'gene8', sample:'place1', specificity:0, value:160},{name:'gene8', sample:'place2', specificity:0, value:43},{name:'gene8', sample:'place3', specificity:0, value:220},{name:'gene8', sample:'place4', specificity:0, value:236},{name:'gene8', sample:'place5', specificity:0, value:54},{name:'gene9', sample:'place1', specificity:0, value:250},{name:'gene9', sample:'place2', specificity:0, value:231},{name:'gene9', sample:'place3', specificity:0, value:20},{name:'gene9', sample:'place4', specificity:0, value:33},{name:'gene9', sample:'place5', specificity:0, value:31},{name:'gene10', sample:'place1', specificity:0, value:100},{name:'gene10', sample:'place2', specificity:0, value:50},{name:'gene10', sample:'place3', specificity:0, value:120},{name:'gene10', sample:'place4', specificity:0, value:181},{name:'gene10', sample:'place5', specificity:0, value:117},{name:'gene11', sample:'place1', specificity:0, value:100},{name:'gene11', sample:'place2', specificity:0, value:50},{name:'gene11', sample:'place3', specificity:0, value:120},{name:'gene11', sample:'place4', specificity:0, value:181},{name:'gene11', sample:'place5', specificity:0, value:117},{name:'gene12', sample:'place1', specificity:0, value:100},{name:'gene12', sample:'place2', specificity:0, value:50},{name:'gene12', sample:'place3', specificity:0, value:120},{name:'gene12', sample:'place4', specificity:0, value:181},{name:'gene12', sample:'place5', specificity:0, value:117},];
-		
-		 var options = {  
-                    treeType: 'linear',
-                  	heatType : 'punchCard'
-                 };
-        
-		
-        var dendroChart = dendroGram()
-				  .option(options)
-				  .heatData(heatMapData);
-        
-       var chartContainer = d3.select("#dendogram")
-            .datum(tree)
-            .call(dendroChart);
-	})
-}
-
-function dendrogram(){
-    
-  	d3.text("data/coleoptera.txt", function(error, tree){
-	// branch scaling issue with redering life.txt
-   //d3.text("/data/life.txt", function(error, tree){
-       
-        var options = {  
-                    weightLinks : false, 
-                    linkValue : true, 
-                    linkName : false, 
-                    nodeSize : true,
-                    legend: false,
-                    noLinkExtend: false,
-                    treeType: 'linear',
-                    nodeShape:'',
-                    subTree: false,
-                    collapseTree: false,
-					textColor : false
-                 };
-        
-        
-        var dendroChart = dendroGram();
-            
-        
-        
-       var chartContainer = d3.select("#dendogram")
-            .datum(tree)
-            .call(dendroChart);
-    })
-}
-
-function radialTree(){
-	
-	d3.text("data/life.txt", function(error, tree){
-		d3.csv("/data/pie_data1.csv", function(error, piedata){
-		d3.csv("/data/bar_data.csv", function(error, bardata){
-				var opt = {treeType: 'radial'};
-		
-				var dendroChart = dendroGram()
-						.option(opt)
-						.pieData(piedata)
-						.barData(bardata)
-						.heatData(bardata)
-				
-				var chartContainer = d3.select("#dendogram")
-							.datum(tree)
-							.call(dendroChart);
-			})
-		})
-	})
 }

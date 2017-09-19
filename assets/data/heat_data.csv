@@ -1,0 +1,85 @@
+name,sample,specificity,value
+Gene1,Hesperiidae,0,300
+Gene1,Lycaenidae,0,250
+Gene1,Nymphalidae,0,200
+Gene1,Papilionidae,0,130
+Gene1,Pieridae,0,70
+Gene1,Gonepteryx,0,30
+Gene1,Anthocharis cardamines,0,110
+Gene2,Hesperiidae,0,73.23
+Gene2,Lycaenidae,0,702.23
+Gene2,Nymphalidae,0,30.23
+Gene2,Papilionidae,0,330.23
+Gene2,Pieridae,0,630.293
+Gene2,Gonepteryx,0,340.23
+Gene2,Anthocharis cardamines,0,70.23
+Gene3,Hesperiidae,0,170.23
+Gene3,Lycaenidae,0,470.23
+Gene3,Nymphalidae,0,30.23
+Gene3,Papilionidae,0,230.23
+Gene3,Pieridae,0,63.23
+Gene3,Gonepteryx,0,30.23
+Gene3,Anthocharis cardamines,0,23.23
+Gene4,Hesperiidae,0,230.23
+Gene4,Lycaenidae,0,170.23
+Gene4,Nymphalidae,0,930.23
+Gene4,Papilionidae,0,130.23
+Gene4,Pieridae,0,163.23
+Gene4,Gonepteryx,0,130.23
+Gene4,Anthocharis cardamines,0,123.23
+Gene5,Hesperiidae,0,573.23
+Gene5,Lycaenidae,0,30.23
+Gene5,Nymphalidae,0,230.23
+Gene5,Papilionidae,0,20.23
+Gene5,Pieridae,0,23.23
+Gene5,Gonepteryx,0,30.23
+Gene5,Anthocharis cardamines,0,523.23
+Gene6,Hesperiidae,0,230.23
+Gene6,Lycaenidae,0,270.23
+Gene6,Nymphalidae,0,30.23
+Gene6,Papilionidae,0,30.23
+Gene6,Pieridae,0,30.23
+Gene6,Gonepteryx,0,310.23
+Gene6,Anthocharis cardamines,0,230.23
+Gene7,Hesperiidae,0,730.23
+Gene7,Lycaenidae,0,70.23
+Gene7,Nymphalidae,0,130.23
+Gene7,Papilionidae,0,430.23
+Gene7,Pieridae,0,630.23
+Gene7,Gonepteryx,0,30.23
+Gene7,Anthocharis cardamines,0,230.23
+Gene8,Hesperiidae,0,730.23
+Gene8,Lycaenidae,0,70.23
+Gene8,Nymphalidae,0,130.23
+Gene8,Papilionidae,0,430.23
+Gene8,Pieridae,0,630.23
+Gene8,Gonepteryx,0,30.23
+Gene8,Anthocharis cardamines,0,230.23
+Gene9,Hesperiidae,0,730.23
+Gene9,Lycaenidae,0,70.23
+Gene9,Nymphalidae,0,130.23
+Gene9,Papilionidae,0,430.23
+Gene9,Pieridae,0,630.23
+Gene9,Gonepteryx,0,30.23
+Gene9,Anthocharis cardamines,0,230.23
+Gene11,Hesperiidae,0,730.23
+Gene11,Lycaenidae,0,70.23
+Gene11,Nymphalidae,0,130.23
+Gene11,Papilionidae,0,430.23
+Gene11,Pieridae,0,630.23
+Gene11,Gonepteryx,0,30.23
+Gene11,Anthocharis cardamines,0,230.23
+Gene12,Hesperiidae,0,730.23
+Gene12,Lycaenidae,0,70.23
+Gene12,Nymphalidae,0,130.23
+Gene12,Papilionidae,0,430.23
+Gene12,Pieridae,0,630.23
+Gene12,Gonepteryx,0,30.23
+Gene12,Anthocharis cardamines,0,230.23
+Gene13,Hesperiidae,0,730.23
+Gene13,Lycaenidae,0,70.23
+Gene13,Nymphalidae,0,130.23
+Gene13,Papilionidae,0,430.23
+Gene13,Pieridae,0,630.23
+Gene13,Gonepteryx,0,30.23
+Gene13,Anthocharis cardamines,0,230.23

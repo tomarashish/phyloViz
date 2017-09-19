@@ -1,0 +1,20 @@
+>Branchiostoma
+M-PRQTHQKTVP---WDAEIDSDALFSSHTIDEIRALENKTRL
+>Hydra magnipapillata
+-M----------TASLLN-LNVDTLFEQNNVSEIDAVHKKIQT
+>Trichoplax adherens
+-M----------TANLLN-LNVDTLFEQHSVSEIDVVHKKIQT
+>Ciona savignyi
+-M----------TSNLLN-LNVDTLFEQHSVSEIDAIHKRIQS
+>Ciona savignyi
+-M----------TANLLN-LNVDTLFEQHSVSEIDAVHKKIQS
+>Gasterosteus aculeatus
+-M----------TANLLN-LNVDTLFEQHSVSEIDEVHKKIQS
+>Tetraodon nigroviridis
+-M----------SADLLQ-LDVDTLFEQHGVSEIDAVQKKIQT
+>Takifugu rubripes
+-M----------SADLLQ-LDVDTLFEQHGVSEIDAVQKKIQT
+>Macropus eugenii
+-------MA--NVTNLLH-INVDKLFEQCGVADIDLVHKRLQS
+>Sarcophilus harrisii
+-I----------SYNLLE-LDVDKLFEEHKIEEIVEIEKLLDA

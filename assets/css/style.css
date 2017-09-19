@@ -316,7 +316,11 @@ text {
   font-weight: bold;
 }
 
-#pasteData{
+#loadFile{
+  display: block;
+}
+
+#pasteUrl{
   display: none;
 }
 

@@ -1,0 +1,2 @@
+(Branchiostoma:0.451027,(Hydra magnipapillata:0.340495):0.222485,(Trichoplax adherens:0.558103,((Ciona savignyi:0.441842,Ciona savignyi:0.299607):0.135307,((Gasterosteus aculeatus:0.771665,((Tetraodon nigroviridis:0.150909):0.082163,Takifugu rubripes:0.099172):0.272338):0.014055,((Macropus eugenii:0.167569):0.104783,Sarcophilus harrisii:0.166557):0.367205):0.050892):0.114731):0.295021);
+

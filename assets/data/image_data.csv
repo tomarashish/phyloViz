@@ -1,0 +1,11 @@
+name,image_path
+CAVEFISH,"image/butterfly.png"
+GOLDFISH,"image/butterfly1.png"
+COELACANTH,"image/butterfly2.png"
+CLAWEDFROG,"image/beetle.png"
+SALAMANDER,"image/beetle1.png"
+CHAMELEON,"image/fly.png"
+PIGEON,"image/bee.png"
+ZEBRAFINCH,"image/bee.png"
+BOVINE,"image/bug.png"
+ELEPHANT,"image/bug.png"
