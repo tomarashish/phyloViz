@@ -311,7 +311,7 @@ function geneChart(tree, gene_data) {
     domainType: 'gene'
   };
 
-  d3.select("#loadData").style("display", "none");
+  d3.select("#loadData").style("visibility", "hidden").style("display", "none");
   d3.select("#showViz").style("display", "block");
 
 
