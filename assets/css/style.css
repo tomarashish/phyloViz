@@ -16,26 +16,26 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    white-space:normal !important;
-    word-wrap:break-word; 
+    white-space: normal !important;
+    word-wrap: break-word;
   }
-  
-  .arrow-down{
+
+  .arrow-down {
     top: 85% !important;
     margin-left: 50%;
-    padding:12px !important;
+    padding: 12px !important;
     font-size: 15px !important;
     width: 50px !important;
-  }  
-  
-  .inner p{
-    font-size: 15px !important;  
   }
-  
-  .lib-phylo{
-    margin: 10px 2px;  
+
+  .inner p {
+    font-size: 15px !important;
   }
-  
+
+  .lib-phylo {
+    margin: 10px 2px;
+  }
+
 }
 
 @media (min-width: 760px) and (max-width: 992px) {
@@ -43,29 +43,29 @@
     padding: 4px 9px;
     font-size: 12px !important;
     line-height: 1.5;
-    white-space:normal !important;
-    word-wrap:break-word; 
+    white-space: normal !important;
+    word-wrap: break-word;
   }
-  
-  .arrow-down{
+
+  .arrow-down {
     top: 85% !important;
     margin-left: 50%;
-    padding:15px !important;
+    padding: 15px !important;
     font-size: 15px !important;
     width: 55px !important;
   }
-  
-  .inner p{
+
+  .inner p {
     font-size: 25px !important;
   }
-  
-  .lib-phylo{
-    margin: 10px 4px;  
+
+  .lib-phylo {
+    margin: 10px 4px;
   }
 }
 
-a{
- text-decoration: none !important;  
+a {
+  text-decoration: none !important;
 }
 
 body {
@@ -77,7 +77,7 @@ body {
   /*background: url(../image/black.jpg) ;*/
 }
 
-.container-fluid{
+.container-fluid {
   margin-right: auto;
   margin-left: auto;
 }
@@ -134,6 +134,7 @@ body {
 
 
 /* chart layout for creating blocks*/
+
 .chart-wrapper {
   background-color: #fff;
   margin-bottom: 10px;
@@ -174,6 +175,7 @@ hr {
 }
 
 /*Widget container*/
+
 .widget-container {
   background: #fff;
   padding: 5px 20px 5px 20px;
@@ -189,6 +191,7 @@ hr {
 
 
 /*widget container */
+
 .widget-box {
   background: #FFFFFF;
   border-left: 1px solid #cdcdcd;
@@ -218,6 +221,7 @@ hr {
 
 
 /*widget */
+
 .widget-card {
   border-radius: 10px;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
@@ -232,6 +236,7 @@ hr {
 
 
 /*custome style on navbar */
+
 .navbar {
   min-height: 50px;
   border-bottom: 0px solid #d9d9d9;
@@ -245,6 +250,7 @@ hr {
 
 
 /*custome style on navbar brand */
+
 .navbar .navbar-brand {
   color: #777;
   color: #fff;
@@ -259,6 +265,7 @@ hr {
 
 
 /* navbar brand on hover */
+
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   color: #68B3C8;
@@ -267,6 +274,7 @@ hr {
 
 
 /*custome style on navbar li */
+
 .navbar .navbar-nav > li > a {
   /*color: #777;*/
   color: #9a9a9a;
@@ -281,6 +289,7 @@ hr {
 
 
 /* navbar li on hover */
+
 .navbar .navbar-nav > li > a:hover {
   background-color: transparent;
   color: #68B3C8;
@@ -289,6 +298,7 @@ hr {
 
 
 /* navbar li on click */
+
 .navbar .navbar-nav > li > a:focus {
   background-color: transparent;
   color: #fff;
@@ -296,16 +306,17 @@ hr {
 
 
 /* active navbar li */
-.navbar .navbar-nav>.active>a,
-.navbar .navbar-nav>.active>a:focus,
-.navbar .navbar-nav>.active>a:hover {
+
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .active > a:hover {
   background-color: #66615b !important;
   color: #fff !important;
   border-radius: 6px !important;
 }
 
-.step{
-background-color: #f7f7f7;  
+.step {
+  background-color: #f7f7f7;
 }
 
 text {
@@ -316,25 +327,27 @@ text {
   font-weight: bold;
 }
 
-#loadFile{
+#loadFile {
   display: block;
 }
 
-#pasteUrl{
+#pasteUrl {
   display: none;
 }
 
-#exampleData{
+#exampleData {
   display: none;
 }
 
-#loadData{
+#loadData {
   display: block;
   background-color: #fff;
-  margin: 200px 0px ;
+  margin: 200px 0px;
 }
 
-.parallex-img1, .parallex-img2, .parallex-img3{
+.parallex-img1,
+.parallex-img2,
+.parallex-img3 {
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -342,17 +355,18 @@ text {
   background-size: cover;
 
 }
+
 .parallex-img1 {
   background-image: url("../img/seq1.png");
   height: 100vh;
 }
 
-.parallex-img2{
+.parallex-img2 {
   background-image: url("../img/sun1.png");
   height: 300px;
 }
 
-.inner{
+.inner {
   position: absolute;
   left: 0;
   top: 35%;
@@ -364,33 +378,33 @@ text {
   display: inline-block;
 }
 
-.inner header h1{
+.inner header h1 {
   font-family: 'Muli', Arial, sans-serif;
   font-weight: bolder !important;
   color: darkturquoise;
 }
 
-.inner p{
-  font-size: 25px;  
+.inner p {
+  font-size: 25px;
   font-weight: bold !important;
   font-family: 'Muli', Arial, sans-serif;
 }
 
-.arrow-down{
+.arrow-down {
   top: 80%;
   margin-left: 50%;
-  padding:15px;
+  padding: 15px;
   font-size: 30px;
   background-color: rgba(52, 27, 43, 0.7);
   border-radius: 50%;
   width: 70px;
-}  
+}
 
-.arrow-down a{ 
+.arrow-down a {
   color: #fff !important;
 }
 
-.arrow-down a:hover{
+.arrow-down a:hover {
   color: darkturquoise !important;
 }
 
@@ -401,7 +415,7 @@ text {
   text-align: center;
 }
 
-.caption .btn-solid{
+.caption .btn-solid {
   color: #fff;
   background-color: rgba(52, 27, 53, .9);
   padding: 15px 15px;
@@ -410,9 +424,9 @@ text {
   letter-spacing: 2px;
 }
 
-.caption .btn-border{
+.caption .btn-border {
   margin: auto;
-  width: 50% !important; 
+  width: 50% !important;
   border: solid 4px;
   color: #000;
   padding: 20px 30px 20px 30px;
@@ -421,21 +435,20 @@ text {
 }
 
 .btn-solid:hover,
-.btn-solid:focus
-{
+.btn-solid:focus {
   color: darkturquoise;
 }
 
 /* custome style for library page*/
-.lib-phylo{
- margin: 100px 400px;  
+
+.lib-phylo {
+  margin: 100px 400px;
 }
 
 #getting-started,
-#tutorial
-{
-  padding-left: 400px;  
-  padding-right: 400px;  
+#tutorial {
+  padding-left: 400px;
+  padding-right: 400px;
   padding-bottom: 30px;
   background-color: #fff;
 }
@@ -443,16 +456,15 @@ text {
 #getting-started,
 #features,
 #tutorial,
-#discover-more
-p{
+#discover-more p {
   font-family: 'Muli', sans-serif;
-  font-size:25px;
+  font-size: 25px;
 }
 
-textarea{
+textarea {
   font-size: 16px;
-  height:300px; 
-  width:500px;
+  height: 300px;
+  width: 500px;
   resize: none;
 }
 
@@ -462,9 +474,15 @@ textarea{
   font-family: 'Muli', Arial, sans-serif;
   position: absolute !important;
   width: 100%;
-  bottom:0 !important;
+  bottom: 0 !important;
   left: 0;
   padding-top: 30px;
   padding-bottom: 10px;
   background-color: #e8dddd;
+}
+
+.dropdown-menu {
+  position: relative;
+  font-size: 16px;
+  float: right;
 }

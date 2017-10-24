@@ -1,143 +1,178 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
   <title>Phylogenomics Visualization</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-  
-    <!-- Using local jquery, bootstrap and D3 -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/d3.v3.min.js"></script>
-    <script src="app/dendogram.js"></script>
-    
-    <!-- Using bootstrap, fontawesome and custom css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-  </head>
-  <body>
-    
-    <!-- header -->
-    <header class="navbar navbar-fixed-top" role="navigation" >
-      <div class="container">
-        <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+  <!-- Using local jquery, bootstrap and D3 -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/d3.v3.min.js"></script>
+  <script src="app/dendogram.js"></script>
+
+
+  <!-- Using bootstrap, fontawesome and custom css -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">PhyloGraph</a>
-        </div>
+        <a class="navbar-brand" href="index.html">PhyloGraph</a>
       </div>
-      
-      <!-- navbar -->
-      <nav class="nav navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="#about"><i class="fa fa-info-circle"></i> About</a></li>
-          <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
-          <li><a href="https://github.com/tomarashish/phylogenomics-viz">Developer Guide &nbsp; <i class="fa fa-github"></i></a></li>
-        </ul>
-      </nav><!-- end of nav-->
-    </header><!-- end of header-->
-    
-   <!-- footer -->
-     <footer class="footer">
+    </div>
+
+    <!-- navbar -->
+    <nav class="nav navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="phyloviz.html"><i class="fa fa-info-circle"></i> App</a></li>
+        <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+        <li><a href="https://github.com/tomarashish/phylogenomics-viz">Developer Guide &nbsp; <i class="fa fa-github"></i></a></li>
+      </ul>
+    </nav>
+    <!-- end of nav-->
+  </header>
+  <!-- end of header-->
+
+  <!-- footer -->
+  <footer class="footer">
     <div class="container">
       <p>Developed By :
-         <span><a href="https://era7bioinformatics.com/en/index.cfm" target="_blank">Era7 Bioinformatics</a></span> &nbsp; And &nbsp;
+        <span><a href="https://era7bioinformatics.com/en/index.cfm" target="_blank">Era7 Bioinformatics</a></span> &nbsp; And &nbsp;
         <span><a href="http://big4-project.eu/" target="_blank">Big4 Project</a></span>
         <span style="float:right"> Project Funded By: <b>European Union </b><img id="footer-logo" height="30" width="40" src="assets/img/logoeu.gif"/></span>
       </p>
     </div>
-  </footer><!-- end of footer-->
-    
-    <!-- data visualization container -->
-    <div class="container-fluid">
-      
-      <!-- data load container -->
-      <div id="loadData"  class="row">
-        <div style="font-size: 30px; margin-top:50px; margin-bottom:50px; font-family: 'Muli', Arial, sans-serif">
-            <center>PHYLOGENOMICS DATA VISUALIZATION</center>
+  </footer>
+  <!-- end of footer-->
+
+  <!-- data visualization container -->
+  <div class="container-fluid">
+
+    <!-- data load container -->
+    <div id="loadData" class="row">
+      <div style="font-size: 30px; margin-top:50px; margin-bottom:50px; font-family: 'Muli', Arial, sans-serif">
+        <center>PHYLOGENOMICS DATA VISUALIZATION</center>
+      </div>
+      <div class="col-md-12 col-sm-12">
+
+        <div class="col-md-4 col-sm-6">
+          <!--div style="font-size: 20px;">
+            <center>Select Type </center>
+          </div-->
+          <div class="caption">
+            <button class="btn btn-raised btn-block btn-responsive btn-border" onclick="loadData()">Upload File</button>
+            <br>
+            <button class="btn btn-raised  btn-block btn-responsive btn-border" onclick="pasteUrl()">Paste Url</button>
+            <br>
+            <button class="btn btn-raised  btn-block btn-responsive btn-border" onclick="tryExample()">Try Examples</button>
           </div>
-        <div class="col-md-12 col-sm-12">
-        
-          <div class="col-md-4 col-sm-6">
-             <div style="font-size: 20px;">
-                <center>Select Type </center>
-              </div>
-               <div class="caption">
-                <button class="btn btn-raised btn-block btn-responsive btn-border" onclick="loadData()">Upload File</button>
-                 <br>
-                 <button class="btn btn-raised  btn-block btn-responsive btn-border"  onclick="pasteUrl()">Paste Url</button>
-                 <br>
-                 <button class="btn btn-raised  btn-block btn-responsive btn-border" onclick="tryExample()">Try Examples</button>
-              </div>
-          </div>
-          
-          <div class="col-md-6 col-sm-6">
-            <div style="font-size: 20px;">
-                <center>Select Data </center>
-              </div>
-            <div id="loadFile">
-              <div class="caption">
-                 <label class="btn btn-block btn-raised btn-responsive btn-border"><i class="fa fa-upload" aria-hidden="true"></i>
-                     <input type="file" id="upload_tree" style="display: none;"><span id="treefile"> Choose Tree File</span>  
-                      </label>
-                <br>
-                 <label class="btn btn-block btn-raised btn-responsive btn-border"><i class="fa fa-upload" aria-hidden="true"></i>
-                     <input type="file" id="upload_metadata" style="display: none;"><span id="metadatafile"> Choose Metadata File</span>  
-                      </label>
-                <br>
-                <button id="submit_file" class="btn btn-block btn-raised btn-responsive btn-border">Submit</button>
-              </div>
-            </div>
-            
-            <div id="pasteUrl">
-              <div class="caption">
-                 <input type="text" id="treeData" class="btn btn-block btn-responsive btn-border" placeholder="Add tree data url">
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+          <!--div style="font-size: 20px;">
+            <center>Select Data </center>
+          </div-->
+          <div id="loadFile">
+            <div class="caption">
+              <label class="btn btn-block btn-raised btn-responsive btn-border"><i class="fa fa-upload" aria-hidden="true"></i>
+                     <input type="file" id="upload_tree" style="display: none;"><span id="treefile"> Choose Tree File  
+                    </span></label>
               <br>
-                <input type="text" id="metaData" class="btn btn-block btn-responsive btn-border" placeholder="Add metadata Url">
+              <div class="dropdown">
+                <button class="btn btn-default btn-raised btn-responsive dropdown-toggle btn-border" type="button" data-toggle="dropdown">Select Metadata
+                      <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">No metadata</a></li>
+                  <li><a href="#">Circle</a></li>
+                  <li><a href="#">Heatmap</a></li>
+                  <li><a href="#">Gene data</a></li>
+                  <li><a href="#">Domain Data</a></li>
+                  <li><a href="#">Piechart Data</a></li>
+                  <li><a href="#">Alignment Data</a></li>
+                  <li><a href="#">Image Data </a></li>
+                  <li><a href="#">barchart Data</a></li>
+                </ul>
+              </div> <br>
+              <label class="btn btn-block btn-raised btn-responsive btn-border"><i class="fa fa-upload" aria-hidden="true"></i>
+                      <input type="file" id="upload_metadata" style="display: none;"><span id="metadatafile"> Choose Metadata File</span>  
+                      </label>
               <br>
-                <button id="submit_url" class="btn btn-block btn-raised btn-responsive btn-border">Submit</button>
-              </div>
+              <button id="submit_file" class="btn btn-block btn-raised btn-responsive btn-border">Submit</button>
             </div>
-            
-             <div id="exampleData">
-               <div class="caption">
-                <br>
-               <button class="btn btn-default btn-raised btn-responsive" onclick="dendrogram()">Linear Dendrogram</button>
-               <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="linkWeight()">Dendrogram link Weight</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="nodeSize()">Dendrogram With node size </button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="linkValue()">Dendrogram With link value</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="subTree()">Dendrogram Sub Tree</button>
-							<button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="showImage()">Dendrogram with image</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="heatmap()">Dendrogram with Heatmap</button>
-							<button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="heatmapWC()">Heatmap with circle</button>
-							<button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="punchCard()">Heatmap with punchcard</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="domainChart()">Dendrogram with domain</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="geneChart()">Dendrogram with gene structure</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="pieData()">Dendrogram with pie</button>
-							<button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="sunCircle()">Dendrogram With sunburst </button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="barData()">Dendrogram with bar chart </button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="stackedBarChart()">Dendrogram with stack bar</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="radialTree()">Circular Dendogram</button>
-                            <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="alignmentChart()">alignment with color</button>
-						 	<button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="alignment1Chart()">alignment w/o color</button>
           </div>
+
+          <div id="pasteUrl">
+            <div class="caption">
+              <input type="text" id="treeData" class="btn btn-block btn-responsive btn-border" placeholder="Add tree data url">
+              <br>
+              <div class="dropdown">
+                <button class="btn btn-default btn-raised btn-responsive dropdown-toggle btn-border" type="button" data-toggle="dropdown">Select Metadata
+                      <span class="caret"></span></button>
+                <ul class="dropdown-menu right-menu">
+                  <li><a href="#">No metadata</a></li>
+                  <li><a href="#">Circle</a></li>
+                  <li><a href="#">Heatmap</a></li>
+                </ul>
+              </div>
+              <br>
+              <input type="text" id="metaData" class="btn btn-block btn-responsive btn-border" placeholder="Add metadata Url">
+              <br>
+              <button id="submit_url" class="btn btn-block btn-raised btn-responsive btn-border">Submit</button>
             </div>
+          </div>
+
+          <div id="exampleData">
+            <div class="caption">
+              <br>
+              <button class="btn btn-default btn-raised btn-responsive" onclick="dendrogram()">Linear Dendrogram</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="linkWeight()">Dendrogram link Weight</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="nodeSize()">Dendrogram With node size </button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="linkValue()">Dendrogram With link value</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="subTree()">Dendrogram Sub Tree</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="showImage()">Dendrogram with image</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="heatmap()">Dendrogram with Heatmap</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="heatmapWC()">Heatmap with circle</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="punchCard()">Heatmap with punchcard</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="domainChart()">Dendrogram with domain</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="geneChart()">Dendrogram with gene structure</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="pieData()">Dendrogram with pie</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="sunCircle()">Dendrogram With sunburst </button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="barData()">Dendrogram with bar chart </button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="stackedBarChart()">Dendrogram with stack bar</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="radialTree()">Circular Dendogram</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="alignmentChart()">alignment with color</button>
+              <button type="btn btn-raised" class="btn btn-default btn-raised btn-responsive" onclick="alignment1Chart()">alignment w/o color</button>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <!-- data visualization container-->
-      <div id="showViz" class="row">
-      </div>
-      <script src="app/app.js"></script>
     </div>
-    
-  </body>
+    <!-- end of data load div-->
+    <!-- data visualization container-->
+    <div id="showViz" class="row">
+      <div class="col-md-12 col-sm-12">
+        <div id="dendrogram"></div>
+      </div>
+    </div>
+    <script src="app/app.js"></script>
+  </div>
+
+</body>
 
 </html>

@@ -169,7 +169,7 @@ dendroGram = function module() {
 		if(option.treeType == "linear"){
 			
 			width = 600;
-        	height = 500;
+        	height = 200;
 			
             var newHeight = d3.max(levelWidth) * 50; // 25 pixels per line
             cluster = cluster.size([newHeight, width - 350]);
